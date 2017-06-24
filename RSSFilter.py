@@ -2,7 +2,7 @@
 
 import feedparser
 import sqlite3
-import pocket
+# import pocket
 
 from rssfeeds import my_feeds
 from keywords import my_keywords
@@ -19,7 +19,7 @@ for feeds in my_feeds:
     for entry in feed['entries']:
         t = entry["title"]
         l = entry["link"]
-        id = entry["id"]
+        ident = entry["id"]
         su = entry["summary"]
 # Score feed elements based on keywords
         entry_score = 0
@@ -33,13 +33,13 @@ for feeds in my_feeds:
                     ID UNIQUE, Title TEXT, Link TEXT, Summary TEXT, Score INTEGER, Pocket INTEGER)
                  ''')
         c.execute('''INSERT OR IGNORE INTO results VALUES (?, ?, ?, ?, ?, 0);
-                ''', (id, t, l, su, sc))
+                ''', (ident, t, l, su, sc))
         conn.commit()
         conn.close()
 # Check score and add high scores to Pocket
 p = Pocket(
-    consumer_key= p_c_key,
-    access_token= p_a_token
+    consumer_key=p_c_key,
+    access_token=p_a_token
 )
 conn = sqlite3.Connection("data\Pocket.db")
 c = conn.cursor()
