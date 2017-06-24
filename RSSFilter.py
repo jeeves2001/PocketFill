@@ -47,7 +47,7 @@ c.execute('SELECT Link FROM results WHERE Score > 2 AND Pocket = 0 LIMIT 1')
 all_rows = c.fetchall()
 try:
     add = all_rows[0][0]
-    p.add(add)
+    p.add(add, tags="Amber")
 except IndexError:
     print("No new articles meet the threshold")
 c.execute('UPDATE results SET Pocket = 1 WHERE Score > 2')

@@ -9,9 +9,9 @@ The script has several dependancies:
 - sqlite3
 - [Pocket](https://github.com/felipecorrea/python-pocket)
 
-You will need to create your own secrets.py file to store your Pocket key and token in the following format. 
-p_c_key = "your key"
-p_a_token = "your token"
+You will need to create your own secrets.py file to store your Pocket key and token in the following format.  
+p_c_key = "your key"  
+p_a_token = "your token"  
 
 ToDo: 
 - [ ] Add a cleanup to remove old low scoring articles 
