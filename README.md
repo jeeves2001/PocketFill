@@ -17,3 +17,4 @@ ToDo:
 - [ ] Add a cleanup to remove old low scoring articles 
 - [ ] Turn the minimum score into a variable
 - [ ] Add tag in Pocket to show were the story came from 
+- [ ] Add logging when there are no new articles 
