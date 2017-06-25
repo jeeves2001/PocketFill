@@ -27,7 +27,7 @@ for feeds in my_feeds:
             entry_score += entry['summary'].count(keyword)
         sc = entry_score
 # Connect to DB and add unique items to the list
-        conn = sqlite3.Connection("data\Pocket.db")
+        conn = sqlite3.Connection("~/PocketFill/data/Pocket.db")
         c = conn.cursor()
         c.execute('''CREATE TABLE IF NOT EXISTS results(
                     ID UNIQUE, Title TEXT, Link TEXT, Summary TEXT, Score INTEGER, Pocket INTEGER)
