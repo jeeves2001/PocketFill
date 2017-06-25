@@ -1,1 +1,5 @@
 data/*
+.idea/workspace.xml
+__pycache__/
+data/
+secrets.py
