@@ -20,7 +20,7 @@ for feeds in my_feeds:
         t = entry["title"]
         l = entry["link"]
         ident = entry["id"]
-        su = entry["summary"]
+        su = entry['summary']
 # Score feed elements based on keywords
         entry_score = 0
         for keyword in keywords:
