@@ -15,4 +15,6 @@ my_keywords = ['Artificial Intelligence',
                'Movies', 
                'movies', 
                'Top 10',
+	       'vegan',
+	       'Azure',
                ]
